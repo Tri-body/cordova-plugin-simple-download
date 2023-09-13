@@ -1,6 +1,6 @@
 ## cordova-plugin-simple-downloader
 
-a simple http download file cordova plugin, only for android platfrom.
+a cordova plugin to simple download file, only for android platfrom.
 
 ### Install/UnInstall
 
