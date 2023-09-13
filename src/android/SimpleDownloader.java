@@ -35,6 +35,7 @@ public class SimpleDownloader extends CordovaPlugin {
             String url = args.getString(0);
             String dir = args.getString(1);
             String name = args.getString(2);
+            boolean md5 = args.getBoolean(3);
             if(!dir.endsWith("/")) {
                 dir = dir + "/";
             }
@@ -43,8 +44,12 @@ public class SimpleDownloader extends CordovaPlugin {
                 file.mkdirs();
             }
             InputStream in = new URL(url).openStream();
-            Files.copy(in, Paths.get(dir + name), StandardCopyOption.REPLACE_EXISTING);            
-            callbackContext.success();
+            Files.copy(in, Paths.get(dir + name), StandardCopyOption.REPLACE_EXISTING);       
+            String ret = "";
+            if (md5) {
+                ret = Md5.encryptMD5File2String(dir + name);
+            }
+            callbackContext.success(ret);
         } catch (Exception e){
             callbackContext.error(e.toString());
         }

@@ -20,5 +20,6 @@
 			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 		</config-file>
 		<source-file src="src/android/SimpleDownloader.java" target-dir="src/dev/tribody/simpledownloader" />
+		<source-file src="src/android/Md5.java" target-dir="src/dev/tribody/simpledownloader" />
 	</platform>
 </plugin>

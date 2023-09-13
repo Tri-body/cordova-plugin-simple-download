@@ -1,6 +1,6 @@
 ## cordova-plugin-simple-downloader
 
-a cordova plugin to simple download file, only for android platfrom.
+a cordova plugin to simple download file, check file md5, only for android platfrom.
 
 ### Install/UnInstall
 
@@ -34,6 +34,7 @@ SimpleDownloader.download(
   },
   e => {
     console.error('error: ', e);
-  }
+  },
+  true // success return md5
 );
 ```
