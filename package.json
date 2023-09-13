@@ -10,11 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tauhidcp/cordova-plugin-simple-http-request.git"
+    "url": "git+https://github.com/Tri-body/cordova-plugin-simple-download.git"
   },
   "keywords": [
     "ecosystem:cordova"
   ],
-  "author": "tribody",
-  "license": "MIT"
+  "author": "ffeiman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tri-body/cordova-plugin-simple-download/issues"
+  },
+  "homepage": "https://github.com/Tri-body/cordova-plugin-simple-download#readme"
 }
