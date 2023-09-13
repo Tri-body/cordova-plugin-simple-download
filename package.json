@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-simple-download",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "cordova plugin to simple http download file",
   "cordova": {
     "id": "cordova-plugin-simple-download",
