@@ -1,4 +1,4 @@
-package dev.tribody.simpledownload;
+package dev.tribody.simpledownloader;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
@@ -15,7 +15,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
-public class SimpleDownload extends CordovaPlugin {
+public class SimpleDownloader extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("download")) {           

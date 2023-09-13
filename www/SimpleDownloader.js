@@ -6,6 +6,6 @@ module.exports = {
       onError('download args is null!');
       return;
     }
-    exec(onSuccess, onError, 'SimpleDownload', 'download', [url, dir, name]);
+    exec(onSuccess, onError, 'SimpleDownloader', 'download', [url, dir, name]);
   },
 };

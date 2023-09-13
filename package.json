@@ -1,24 +1,25 @@
 {
-  "name": "cordova-plugin-simple-download",
-  "version": "1.0.2",
+  "name": "cordova-plugin-simple-downloader",
+  "version": "1.0.3",
   "description": "cordova plugin to simple http download file",
   "cordova": {
-    "id": "cordova-plugin-simple-download",
+    "id": "cordova-plugin-simple-downloader",
     "platforms": [
       "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tri-body/cordova-plugin-simple-download.git"
+    "url": "git+https://github.com/Tri-body/cordova-plugin-simple-downloader.git"
   },
   "keywords": [
-    "ecosystem:cordova"
+    "ecosystem:cordova",
+    "cordova-android"
   ],
   "author": "ffeiman",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Tri-body/cordova-plugin-simple-download/issues"
+    "url": "https://github.com/Tri-body/cordova-plugin-simple-downloader/issues"
   },
-  "homepage": "https://github.com/Tri-body/cordova-plugin-simple-download#readme"
+  "homepage": "https://github.com/Tri-body/cordova-plugin-simple-downloader#readme"
 }
