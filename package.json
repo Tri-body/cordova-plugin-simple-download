@@ -1,0 +1,20 @@
+{
+  "name": "cordova-plugin-simple-download",
+  "version": "1.0.0",
+  "description": "cordova plugin to simple http download file",
+  "cordova": {
+    "id": "cordova-plugin-simple-download",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tauhidcp/cordova-plugin-simple-http-request.git"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "tribody",
+  "license": "MIT"
+}

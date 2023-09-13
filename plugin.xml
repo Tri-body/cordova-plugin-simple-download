@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-simple-download" version="0.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova-plugin-simple-download</name>
+    <js-module name="SimpleDownload" src="www/SimpleDownload.js">
+        <clobbers target="SimpleDownload" />
+    </js-module>
+	<platform name="android">
+		<config-file file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
+			<application android:usesCleartextTraffic="true" />
+		</config-file>
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="SimpleDownload">
+				<param name="android-package" value="dev.tribody.simpledownload" />
+			</feature>
+			<preference name="AndroidInsecureFileModeEnabled" value="true"/>
+		</config-file>
+		<config-file target="app/src/main/AndroidManifest.xml" parent="/manifest">
+			<uses-permission android:name="android.permission.INTERNET" />
+			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+		</config-file>
+		<source-file src="src/android/SimpleDownload.java" target-dir="src/dev/tribody/simpledownload" />
+	</platform>
+</plugin>
