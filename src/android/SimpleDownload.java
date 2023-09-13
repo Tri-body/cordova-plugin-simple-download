@@ -27,21 +27,18 @@ public class SimpleDownload extends CordovaPlugin {
         }
         return false;
     }
-}
-
-private void download(JSONArray args) {
-    String url = args.getString(0);
-    String destination = args.getString(1);
-    try{
-        InputStream in = new URL(url).openStream();
-        Files.copy(in, Paths.get(destination), StandardCopyOption.REPLACE_EXISTING);
-        
-        callbackContext.success();
-        
-    } catch (Exception e){
-        callbackContext.error(e.toString());
-    }
     
-
-
+    private void download(JSONArray args) {
+        String url = args.getString(0);
+        String destination = args.getString(1);
+        try{
+            InputStream in = new URL(url).openStream();
+            Files.copy(in, Paths.get(destination), StandardCopyOption.REPLACE_EXISTING);
+            
+            callbackContext.success();
+            
+        } catch (Exception e){
+            callbackContext.error(e.toString());
+        }
+    }
 }
