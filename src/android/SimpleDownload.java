@@ -17,10 +17,12 @@ public class SimpleDownload extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("download")) {
+             String url = args.getString(0);
+             String dest = args.getString(1);
             cordova.getThreadPool().execute(new Runnable() {
                 @Override
                 public void run() {
-                    download(args);
+                    download(url, dest, callbackContext);
                 }
             });
             return true;
@@ -28,12 +30,10 @@ public class SimpleDownload extends CordovaPlugin {
         return false;
     }
     
-    private void download(JSONArray args) {
-        String url = args.getString(0);
-        String destination = args.getString(1);
+    private void download(String url, String dest, CallbackContext callbackContext) {       
         try{
             InputStream in = new URL(url).openStream();
-            Files.copy(in, Paths.get(destination), StandardCopyOption.REPLACE_EXISTING);
+            Files.copy(in, Paths.get(dest), StandardCopyOption.REPLACE_EXISTING);
             
             callbackContext.success();
             

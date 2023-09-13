@@ -10,7 +10,7 @@
 		</config-file>
 		<config-file parent="/*" target="res/xml/config.xml">
 			<feature name="SimpleDownload">
-				<param name="android-package" value="dev.tribody.simpledownload" />
+				<param name="android-package" value="dev.tribody.simpledownload.SimpleDownload" />
 			</feature>
 			<preference name="AndroidInsecureFileModeEnabled" value="true"/>
 		</config-file>
