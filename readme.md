@@ -29,12 +29,12 @@ SimpleDownloader.download(
   'http://127.0.0.1:8080/xxx.mp4',
   '/storage/emulated/0/Android/data/<appid>/files/', // can't use file:///storage...
   'yyy.mp4',
-  () => {
-    console.log('ok');
+  (md5) => {
+    console.log('ok', md5);
   },
   e => {
     console.error('error: ', e);
   },
-  true // success return md5
+  true // if true, success callback return file md5, default false.
 );
 ```
